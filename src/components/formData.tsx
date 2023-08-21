@@ -1,10 +1,10 @@
 'use client'
-import React, { useEffect, useState, memo } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
-function formData({ id }: any) {
+function FormData({ id }: any) {
 
     const [tasks, setTasks] = useState<any>(null)
 
@@ -41,4 +41,4 @@ function formData({ id }: any) {
     )
 }
 
-export default memo(formData)
+export default memo(FormData)
