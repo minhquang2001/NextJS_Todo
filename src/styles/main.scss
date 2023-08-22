@@ -19,6 +19,16 @@ header {
         h3 {
             margin-left: 8px;
         }
+
+    }
+
+    .header__todo {
+        text-decoration: none;
+        color: var(--text-color);
+
+        &:hover {
+            color: rgb(26, 140, 255);
+        }
     }
 
 }
@@ -163,7 +173,16 @@ header {
             .icon {
                 display: block;
                 margin-right: 16px;
-                color: red
+
+            }
+
+            .checked {
+                color: green
+            }
+
+            .xmark {
+                color: red;
+
             }
 
             p {
@@ -176,11 +195,47 @@ header {
 
         .btn {
             width: 10%;
-            display: block;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 12px 8px;
             border: 1px solid #e7e7e7;
             border-radius: 12px;
+            cursor: pointer;
+
+            .spinner {
+                width: 15px;
+                height: 15px;
+                margin-right: 8px;
+                border-radius: 50%;
+                border: 2px dotted transparent;
+                border-left-color: #2f55ff;
+                border-top-color: #2f55ff;
+
+                animation: rotate 1s linear infinite;
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
         }
     }
+}
+
+.wrap__done {
+    display: flex;
+    margin-top: 12px;
+}
+
+
+main {
+    height: 200px;
+    text-align: center;
+    transform: translateY(50%);
 }

@@ -1,15 +1,16 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Logo from '@/assets/geekup-logo-general.svg'
 function Header() {
     return (
         <header>
-            <div className='header__wrap'>
+            <Link href="/" className='header__wrap'>
                 <Image src={Logo} alt="logo" />
-                {/* <h3>Test</h3> */}
-            </div>
-            <span>Todo</span>
+            </Link>
+            <Link href="/todo" className='header__todo'>Todo</Link>
+
         </header>
     )
 }
